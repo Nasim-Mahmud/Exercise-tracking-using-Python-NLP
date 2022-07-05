@@ -8,3 +8,5 @@ secure_header = {
     "x-app-key": NUTRITIONIX_APP_KEY
 }
 
+response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exercise", headers=secure_header)
+print(response.text)
