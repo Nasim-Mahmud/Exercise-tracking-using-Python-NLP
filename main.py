@@ -1,0 +1,4 @@
+import requests
+
+NUTRITIONIX_APP_ID = "928a9c3e"
+NUTRITIONIX_APP_KEY = ""
