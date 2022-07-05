@@ -8,5 +8,13 @@ secure_header = {
     "x-app-key": NUTRITIONIX_APP_KEY,
 }
 
-response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exercise", headers=secure_header)
-response.raise_for_status()
+nutrition_parameters = {
+    "query": input("What type of exercise?\n"),
+    "gender": "male",
+    "weight_kg": 100.5,
+    "height_cm": 177.64,
+    "age": 26
+}
+
+response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exercise",json=nutrition_parameters, headers=secure_header)
+print(response.text)
