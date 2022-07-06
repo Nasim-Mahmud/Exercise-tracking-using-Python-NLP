@@ -5,6 +5,7 @@ NUTRITIONIX_APP_KEY = "a0f0b15c97b41a3f83dd37514ca42a6d"
 GENDER = "male"
 WEIGHT = 100.5
 HEIGHT = 177.64
+AGE = 26
 
 secure_header = {
     "x-app-id": NUTRITIONIX_APP_ID,
@@ -16,7 +17,7 @@ nutrition_parameters = {
     "gender": GENDER,
     "weight_kg": WEIGHT,
     "height_cm": HEIGHT,
-    "age": 26
+    "age": AGE
 }
 
 response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exercise", json=nutrition_parameters,
