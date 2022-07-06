@@ -13,9 +13,9 @@ secure_header = {
 
 nutrition_parameters = {
     "query": input("Tell me which exercise you did?\n"),
-    "gender": "male",
-    "weight_kg": 100.5,
-    "height_cm": 177.64,
+    "gender": GENDER,
+    "weight_kg": WEIGHT,
+    "height_cm": HEIGHT,
     "age": 26
 }
 
