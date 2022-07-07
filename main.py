@@ -24,4 +24,5 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
                          headers=secure_header)
 
 data = response.json()
-print(data)
+print(response.text)
+print(type(response.text))
