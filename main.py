@@ -11,7 +11,6 @@ secure_header = {
     "x-app-id": NUTRITIONIX_APP_ID,
     "x-app-key": NUTRITIONIX_APP_KEY,
 }
-
 nutrition_parameters = {
     "query": input("Tell me which exercise you did?\n"),
     "gender": GENDER,
