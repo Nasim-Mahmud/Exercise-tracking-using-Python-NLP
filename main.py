@@ -19,7 +19,6 @@ nutrition_parameters = {
     "height_cm": HEIGHT,
     "age": AGE
 }
-
 response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exercise", json=nutrition_parameters,
                          headers=secure_header)
 
