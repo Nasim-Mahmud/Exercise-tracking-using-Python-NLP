@@ -6,7 +6,7 @@ GENDER = "male"
 WEIGHT = 100.5
 HEIGHT = 177.64
 AGE = 26
-
+#setting parameters
 secure_header = {
     "x-app-id": NUTRITIONIX_APP_ID,
     "x-app-key": NUTRITIONIX_APP_KEY,
