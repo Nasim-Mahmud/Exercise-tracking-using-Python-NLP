@@ -28,3 +28,5 @@ data = response.json()
 print(response.text)
 
 # Setting SHEETY parameters and adding data to google sheets
+
+res1 = requests.post(url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts")
