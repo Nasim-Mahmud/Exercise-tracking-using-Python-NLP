@@ -46,5 +46,3 @@ for exercise in data["exercises"]:
     sheety_response = requests.post(
         url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=inputs)
     print(sheety_response.text)
-
-
