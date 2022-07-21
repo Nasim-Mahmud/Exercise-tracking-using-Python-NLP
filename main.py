@@ -34,7 +34,13 @@ now = datetime.now().strftime("%X")
 
 for exercise in data["exercises"]:
     input = {
-
+        "workout":{
+            "date": today,
+            "time": now,
+            "exercise": data["name"].title(),
+            "duration": data["duration_min"],
+            "calories": data["nf_calories"]
+        }
     }
 # Setting SHEETY parameters and adding data to google sheets
 
