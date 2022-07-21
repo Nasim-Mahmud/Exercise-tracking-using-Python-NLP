@@ -32,6 +32,7 @@ print(data["exercises"])
 today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
 
+# Setting SHEETY parameters and adding data to google sheets
 for exercise in data["exercises"]:
     input = {
         "workout":{
@@ -42,10 +43,6 @@ for exercise in data["exercises"]:
             "calories": data["nf_calories"]
         }
     }
-# Setting SHEETY parameters and adding data to google sheets
 
-# sheety_parameters = {
-#
-# }
-#
+
 # res1 = requests.post(url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=)
