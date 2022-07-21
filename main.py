@@ -28,6 +28,10 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
 data = response.json()
 print(data["exercises"])
 
+
+today = datetime.now().strftime("%d/%m/%Y")
+now = datetime.now().strftime("%X")
+
 # Setting SHEETY parameters and adding data to google sheets
 
 # sheety_parameters = {
