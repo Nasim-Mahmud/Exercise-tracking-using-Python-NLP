@@ -13,7 +13,6 @@ secure_header = {
     "x-app-key": NUTRITIONIX_APP_KEY,
 }
 
-# Setting parameters
 nutrition_parameters = {
     "query": input("Tell me which exercise you did?\n"),
     "gender": GENDER,
@@ -27,3 +26,5 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
 
 data = response.json()
 print(response.text)
+
+# Setting SHEETY parameters and adding data to google sheets
