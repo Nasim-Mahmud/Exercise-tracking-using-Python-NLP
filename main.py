@@ -27,7 +27,7 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
                          headers=secure_header)
 
 data = response.json()
-# print(data["exercises"])
+print(data["exercises"])
 
 today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
@@ -38,9 +38,9 @@ for exercise in data["exercises"]:
         "workout": {
             "date": today,
             "time": now,
-            "exercise": data["name"].title(),
-            "duration": data["duration_min"],
-            "calories": data["nf_calories"]
+            "exercise": exercise["name"].title(),
+            "duration": exercise["duration_min"],
+            "calories": exercise["nf_calories"]
         }
     }
 
