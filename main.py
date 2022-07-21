@@ -27,7 +27,7 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
                          headers=secure_header)
 
 data = response.json()
-print(data)
+print(len(data["exercises"]))
 
 today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
@@ -43,7 +43,8 @@ for exercise in data["exercises"]:
             "calories": exercise["nf_calories"]
         }
     }
+    sheety_response = requests.post(
+        url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=inputs)
+    print(sheety_response.text)
 
-sheety_response = requests.post(url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=inputs)
 
-print(sheety_response.text)
