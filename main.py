@@ -1,5 +1,6 @@
-import requests
 from datetime import datetime
+
+import requests
 
 NUTRITIONIX_APP_ID = "928a9c3e"
 NUTRITIONIX_APP_KEY = "a0f0b15c97b41a3f83dd37514ca42a6d"
@@ -28,14 +29,13 @@ response = requests.post(url="https://trackapi.nutritionix.com/v2/natural/exerci
 data = response.json()
 print(data["exercises"])
 
-
 today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
 
 # Setting SHEETY parameters and adding data to google sheets
 for exercise in data["exercises"]:
-    input = {
-        "workout":{
+    inputs = {
+        "workout": {
             "date": today,
             "time": now,
             "exercise": data["name"].title(),
@@ -44,5 +44,4 @@ for exercise in data["exercises"]:
         }
     }
 
-
-# res1 = requests.post(url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=)
+res1 = requests.post(url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=inputs)
