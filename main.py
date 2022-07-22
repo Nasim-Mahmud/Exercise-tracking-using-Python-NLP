@@ -33,6 +33,9 @@ today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
 
 # Sheety authorization
+sheety_headers = {
+    "Authorization": "Basic d29ya1RyYWNrOmFzZGYxMjM0"
+}
 
 # Setting SHEETY parameters and adding data to google sheets
 for exercise in data["exercises"]:
