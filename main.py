@@ -32,6 +32,8 @@ print(len(data["exercises"]))
 today = datetime.now().strftime("%d/%m/%Y")
 now = datetime.now().strftime("%X")
 
+# Sheety authorization
+
 # Setting SHEETY parameters and adding data to google sheets
 for exercise in data["exercises"]:
     inputs = {
