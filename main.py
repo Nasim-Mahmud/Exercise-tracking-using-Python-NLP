@@ -51,3 +51,4 @@ for exercise in data["exercises"]:
         url="https://api.sheety.co/75f004290b7a8e66b7e5741a6a9e4137/workoutTracking/workouts", json=inputs,
         headers=sheety_headers)
     print(sheety_response.text)
+    
